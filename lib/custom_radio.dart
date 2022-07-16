@@ -17,9 +17,6 @@ class CustomRadioState extends State<CustomRadio> {
     // TODO: implement initState
     super.initState();
     sampleData.add(RadioModel(false, 'A', 'April 18'));
-    sampleData.add(RadioModel(false, 'B', 'April 17'));
-    sampleData.add(RadioModel(false, 'C', 'April 16'));
-    sampleData.add(RadioModel(false, 'D', 'April 15'));
   }
  
   @override
@@ -95,6 +92,6 @@ class RadioModel {
   bool isSelected;
   final String buttonText;
   final String text;
-  
+
   RadioModel(this.isSelected, this.buttonText, this.text);
 }
