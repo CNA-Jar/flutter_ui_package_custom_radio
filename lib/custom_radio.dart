@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomRadio extends StatelessWidget {
   CustomRadio({Key? key, this.switchActive: false, this.onChanged}) : super(key: key);
   final bool switchActive;
-  final ValueChanged<bool> onChanged;
+  final ValueChanged onChanged;
 
   void _switchActiveChanged() {
     onChanged(!switchActive);
