@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomRadio extends StatefulWidget {
-  const CustomRadio({Key? key}) : super(key: key);
+  const CustomRadio({Key key, this.switchActive: false, this.onChanged}) : super(key: key);
 
   @override
   createState() {
-    return _CustomRadioState();
+    return _CustomRadioState({Key key, this.switchActive: false, this.onChanged});
   }
 }
 
