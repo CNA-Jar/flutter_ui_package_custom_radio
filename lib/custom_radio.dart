@@ -13,12 +13,12 @@ class CustomRadio extends StatefulWidget {
 }
 
 class _CustomRadioState extends State<CustomRadio> {
-  bool _switchActive = false; //单选按钮状态
+  _CustomRadioState({Key key, this.switchActive: false, this.onChanged}) : super(key: key);
+  final switchActive;
+  final ValueChanged<bool> onChanged;
 
   void _switchActiveChanged() {
-    setState(() {
-      _switchActive = !_switchActive;
-    });
+    onChanged(!switchActive);
   }
 
   @override
