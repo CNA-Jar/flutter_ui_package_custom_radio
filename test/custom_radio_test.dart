@@ -4,7 +4,10 @@ import 'package:custom_radio/custom_radio.dart';
 
 void main() {
   test('adds one to input values', () {
-    final calculator = CustomRadio();
+    final calculator = CustomRadio(
+      false,
+      () => {}
+    );
     // calculator.build(context)
     // expect(calculator.addOne(2), 3);
     // expect(calculator.addOne(-7), -6);
