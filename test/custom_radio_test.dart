@@ -4,9 +4,14 @@ import 'package:custom_radio/custom_radio.dart';
 
 void main() {
   test('adds one to input values', () {
+    // final bool _value = false;
+    void _get(bool _value) {
+      print('value: $_value');
+    };
+    
     final calculator = CustomRadio(
-      false,
-      () => {}
+      switchActive: false,
+      onChanged: _get
     );
     // calculator.build(context)
     // expect(calculator.addOne(2), 3);
