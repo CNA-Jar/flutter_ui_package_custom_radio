@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomRadio extends StatelessWidget {
-  CustomRadio({Key? key, this.switchActive: false, this.onChanged}) : super(key: key);
-  final switchActive;
+  CustomRadio({Key? key, this.switchActive: false, this.onChanged(bool )}) : super(key: key);
+  final bool switchActive;
   final ValueChanged<bool> onChanged;
 
   void _switchActiveChanged() {
@@ -20,7 +20,7 @@ class CustomRadio extends StatelessWidget {
         width: 12.sp,
         height: 12.sp,
         margin: EdgeInsets.fromLTRB(0.0, 0.0, 6.sp, 0.0),
-        child: _switchActive
+        child: switchActive
             ? Image.asset('assets/images/selected.png')
             : Image.asset('assets/images/select.png'),
       ),
